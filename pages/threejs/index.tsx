@@ -1,10 +1,14 @@
 import React from "react";
-import Box from "./Box";
 import { Canvas } from "@react-three/fiber";
+import dynamic from 'next/dynamic'
+
+const Box = dynamic(() => import('./Box'),{
+  ssr: false,
+})
 
 const index = () => {
   return (
-    <div>
+    <div  style={{ position: "relative", width: 500, height: 500 }}>
       <Canvas>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
