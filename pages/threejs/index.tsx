@@ -2,7 +2,7 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import dynamic from 'next/dynamic'
 
-const Box = dynamic(() => import('./Box'),{
+const Box = dynamic(() => import('@/components/canvas/Box'),{
   ssr: false,
 })
 
