@@ -8,7 +8,7 @@ export default class CustomDocument extends Document {
         <body>
           <style>
             @import
-            url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap');
+            url(&apos;https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap&apos;);
           </style>
           <Main />
           <NextScript />
