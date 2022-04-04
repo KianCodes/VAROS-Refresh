@@ -18,14 +18,12 @@ export default function Home() {
         </h1>
 
         <div className={styles.grid}>
-          <div className={styles.card}>
-            <Link href="/threejs">
+          <Link href="/threejs">
+            <div className={styles.card}>
               <h2>Three.js &rarr;</h2>
-            </Link>
-            <p>
-              Check out this cube bro
-            </p>
-          </div>
+              <p>Check out this cube bro</p>
+            </div>
+          </Link>
         </div>
       </main>
 

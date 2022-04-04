@@ -1,9 +1,4 @@
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-} from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class CustomDocument extends Document {
   render() {
@@ -11,8 +6,7 @@ export default class CustomDocument extends Document {
       <Html>
         <Head>
           <style>
-            @import
-            url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap');
           </style>
         </Head>
 
