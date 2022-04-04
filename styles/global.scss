@@ -1,7 +1,7 @@
 
-$primary-color: #e10b06;
+$primary: #e10b06;
 $primary-light: #d65956;
-$secondary-color: #fc7f0b;
+$secondary: #fc7f0b;
 $secondary-light: #f4af70;
 $black: #0d0d0d;
 
@@ -9,13 +9,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  font-family: 'Spline Sans', sans-serif;
 }
 
 * {
