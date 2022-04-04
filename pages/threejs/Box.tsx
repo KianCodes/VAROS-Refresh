@@ -1,25 +1,32 @@
-import * as THREE from "three";
-import React, { useRef, useState } from "react";
-import { useFrame } from "@react-three/fiber";
+import dynamic from 'next/dynamic'
 
-const Box = (props: JSX.IntrinsicElements["mesh"]) => {
-  const ref = useRef<THREE.Mesh>(null!);
-  const [hovered, hover] = useState(false);
-  const [clicked, click] = useState(false);
-  useFrame((state, delta) => (ref.current.rotation.x += 0.01));
+const Box = dynamic(() => import('@/components/canvas/Box'), {
+  ssr:false,
+})
+
+const R3F = () => {
   return (
-    <mesh
-      {...props}
-      ref={ref}
-      scale={clicked ? 1.5 : 1}
-      onClick={(event) => click(!clicked)}
-      onPointerOver={(event) => hover(true)}
-      onPointerOut={(event) => hover(false)}
-    >
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
-    </mesh>
-  );
-};
+    <>
+      <Box />
+    </>
+  )
+}
 
-export default Box;
+const Page = () => {
+  return (
+    <>
+      {/* @ts-ignore */}
+      <R3F r3f />
+    </>
+  )
+}
+
+export default Page
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: 'Box',
+    },
+  }
+}
