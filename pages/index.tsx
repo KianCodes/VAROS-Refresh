@@ -4,17 +4,29 @@ import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   const videoRef = useRef(null);
-  const [isIntersecting, setIntersecting] = useState(false)
-  const videoScrollRange = 349;
-
+  const [inView, setInView] = useState(true)
+  const endPosition = 349;
+  
+  
   useEffect(() => {
-    const videoTimeRange = videoRef.current.duration;
     
-    document.addEventListener('scroll', function(e) {
+    videoRef.current.play()
 
+    document.addEventListener('scroll', function(e) {
       let scrollEvent = window.pageYOffset;
-      let videoTime = (scrollEvent/videoScrollRange)*videoTimeRange;
-      videoRef.current.currentTime = videoTime;
+      if(inView && scrollEvent > endPosition) {
+        videoRef.current.pause()
+        setInView(false)
+      }
+      if(!inView && scrollEvent <= endPosition) {
+        videoRef.current.play()
+      }
+
+
+      // if(videoRef.current.currentTime === videoRef.current.duration) {
+      //   videoRef.current.defaultPlaybackRate = 0;
+      // }
+
     })
   });
 
@@ -62,6 +74,123 @@ export default function Home() {
         <h1 className={styles.subTitle}>
           Meet the team
         </h1>
+        <div className={styles.teamWrapper}>
+          <div className={styles.teamRow}>
+            <div className={styles.teamItem}>
+
+              <div className={styles.imgLinkContainer}>
+                <img className={styles.image} alt="andrew" src="/images/team/Andrew.jpg" />
+                <div className={styles.imgLink}>
+                  <a href="https://linktr.ee/andrewbouras">LinkTree</a>
+                </div>
+                
+              </div>
+              
+              <h3>Andrew Bouras</h3>
+              <p>President & CEO</p>
+            </div>
+            <div className={styles.teamItem}>
+
+              <div className={styles.imgLinkContainer}>
+                <img className={styles.image} alt="saket" src="/images/team/Saket.png" />
+                <div className={styles.imgLink} >
+                  <a href="https://www.linkedin.com/in/saket-bikmal-620692173/">LinkedIn</a>
+                </div>
+              </div>
+
+                <h3>Saket Bikmal</h3>
+              <p>Vice-President & COO</p>
+            </div>
+            <div className={styles.teamItem}>
+
+              <div className={styles.imgLinkContainer}> 
+                <img className={styles.image} alt="leo" src="/images/team/kian2.jpg" />
+                <div className={styles.imgLink} >
+                  <a href="https://www.linkedin.com/in/gunnar-nelson-3878ba114/">LinkedIn</a>
+                </div>
+              </div>
+
+              <h3>Leo Stone</h3>
+              <p>Software Engineer & Project Manager</p>
+            </div>
+          </div>
+          <div className={styles.teamRow}>
+            <div className={styles.teamItem}>
+
+              <div className={styles.imgLinkContainer}> 
+                <img className={styles.image} alt="cam" src="/images/team/Cam.JPG" />
+                <div className={styles.imgLink} >
+                  <a href="https://www.linkedin.com/in/cameron-ardani-b4a5011b3/">LinkedIn</a>
+                </div>
+              </div>
+
+              <h3>Cameron Ardani</h3>
+              <p>Biological Sciences & Sales</p>
+            </div>
+            <div className={styles.teamItem}>
+              
+              <div className={styles.imgLinkContainer}> 
+                <img className={styles.image} alt="josh" src="/images/team/Josh.jpeg" />
+                <div className={styles.imgLink} >
+                  <a href="https://www.linkedin.com/in/josh-b-005613133/">LinkedIn</a>
+                </div>
+              </div>
+
+              <h3>Josh Bradley</h3>
+              <p>Finance, Marketing, & Sales</p>
+            </div>
+            <div className={styles.teamItem}>
+              
+              <div className={styles.imgLinkContainer}> 
+                <img className={styles.image} alt="shakiba" src="/images/team/Shakiba.png" />
+                <div className={styles.imgLink} >
+                  <a href="https://www.linkedin.com/in/sdavari/">LinkedIn</a>
+                </div>
+              </div>
+
+              <h3>Shakiba Davari</h3>
+              <p>Software Engineer</p>
+            </div>
+          </div>
+          <div className={styles.teamRow}>
+            <div className={styles.teamItem}>
+
+              <div className={styles.imgLinkContainer}> 
+                <img className={styles.image} alt="ronny" src="/images/team/Ronny.png" />
+                <div className={styles.imgLink} >
+                  <a href="linkedin.com/in/ronny-ghaida-82021918a">LinkedIn</a>
+                </div>
+              </div>
+              
+              <h3>Ronny Ghaida</h3>
+              <p>Graphic Artist</p>
+            </div>
+            <div className={styles.teamItem}>
+              
+              <div className={styles.imgLinkContainer}> 
+                <img className={styles.image} alt="michael" src="/images/team/Michael.jpeg" />
+                <div className={styles.imgLink} >
+                  <a href="https://www.linkedin.com/in/michael-j-joseph711/">LinkedIn</a>
+                </div>
+              </div>
+
+              <h3>Michael Joseph</h3>
+              <p>Web Developer</p>
+            </div>
+            <div className={styles.teamItem}>
+
+              <div className={styles.imgLinkContainer}>   
+                <img className={styles.image} alt="kian" src="/images/team/kian1.jpg" />
+                <div className={styles.imgLink} >
+                  <a href="https://github.com/KianCodes">GitHub</a>
+                </div>
+              </div>  
+
+              <h3>Kian Maranon</h3>
+              <p>Web Developer</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
