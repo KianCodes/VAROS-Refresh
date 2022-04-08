@@ -9,12 +9,8 @@ export default function Home() {
 
   useEffect(() => {
     const videoTimeRange = videoRef.current.duration;
-    const observer = new IntersectionObserver(
-      ([entry]) => setIntersecting(entry.isIntersecting)
-    )
     
     document.addEventListener('scroll', function(e) {
-      observer.observe(videoRef.current)
 
       let scrollEvent = window.pageYOffset;
       let videoTime = (scrollEvent/videoScrollRange)*videoTimeRange;
@@ -61,11 +57,6 @@ export default function Home() {
             technology to improve health literacy.
           </p>
         </div>
-      </div>
-      <div id="process" className={styles.mainProcess}>
-        <h1 className={styles.subTitle}>
-          Process
-        </h1>
       </div>
       <div id="about" className={styles.mainTeam}>
         <h1 className={styles.subTitle}>
