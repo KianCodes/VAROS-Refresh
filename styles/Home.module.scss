@@ -1,3 +1,5 @@
+@use '../utils/base';
+
 .container {
   padding: 0 2rem;
 }
@@ -27,6 +29,39 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+}
+
+.main img {
+  height: 200px;
+}
+.varos {
+  margin: 0 0 20px 0;
+}
+.varos b {
+  font-size: 30px;
+}
+
+.vLight {
+  color: white;
+}
+.aRed {
+  color: base.$primary
+}
+.rLight {
+  color: white;
+}
+.oOrange {
+  color: base.$secondary
+}
+.sRedWhite {
+  color: base.$primary-light
+}
+
+.videoMask {
+  width: 650px;
+  height: 365.63px;
+  border-radius: 25px; 
+  overflow: hidden; 
 }
 
 .title,
@@ -97,4 +132,49 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.mainMission {
+  min-height: 100vh;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.mainMission img {
+  height: 700px;
+  padding: 0px 30px 0px 30px;
+}
+
+.mainMission p {
+  max-width: 400px;
+  line-height: 2.5;
+  font-size: 25px;
+}
+
+.subTitle {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.mainProcess {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainTeam {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
