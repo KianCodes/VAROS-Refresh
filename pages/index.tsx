@@ -3,32 +3,32 @@ import React, { useEffect,useState,useRef } from 'react'
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
-  const videoRef = useRef(null);
-  const [inView, setInView] = useState(true)
-  const endPosition = 349;
+  // const videoRef = useRef(null);
+  // const [inView, setInView] = useState(true)
+  // const endPosition = 349;
   
   
-  useEffect(() => {
+  // useEffect(() => {
     
-    videoRef.current.play()
+  //   videoRef.current.play()
 
-    document.addEventListener('scroll', function(e) {
-      let scrollEvent = window.pageYOffset;
-      if(inView && scrollEvent > endPosition) {
-        videoRef.current.pause()
-        setInView(false)
-      }
-      if(!inView && scrollEvent <= endPosition) {
-        videoRef.current.play()
-      }
+  //   document.addEventListener('scroll', function(e) {
+  //     let scrollEvent = window.pageYOffset;
+  //     if(inView && scrollEvent > endPosition) {
+  //       videoRef.current.pause()
+  //       setInView(false)
+  //     }
+  //     if(!inView && scrollEvent <= endPosition) {
+  //       videoRef.current.play()
+  //     }
 
 
-      // if(videoRef.current.currentTime === videoRef.current.duration) {
-      //   videoRef.current.defaultPlaybackRate = 0;
-      // }
+  //     // if(videoRef.current.currentTime === videoRef.current.duration) {
+  //     //   videoRef.current.defaultPlaybackRate = 0;
+  //     // }
 
-    })
-  });
+  //   })
+  // });
 
   return (
     <div className={styles.container}>
@@ -42,17 +42,17 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to{' '}
         </h1>
-        <img alt="VAROS Logo" src="/images/TransparentLogo-DarkTheme.png" />
+        <img className = {styles.logo} alt="VAROS Logo" src="/images/TransparentLogo-DarkTheme.png" />
         <span className={styles.varos}>
           <b className = {styles.vLight}>{"Virtual "}</b>
-          <b> {" & "}</b>
+          <b className = {styles.andLight}> {" & "}</b>
           <b className = {styles.aRed} >{"Augmented "}</b>
           <b className = {styles.rLight} >{" Reality "}</b>
           <b className = {styles.oOrange} >{"Organ "}</b>
           <b className = {styles.sRedWhite}>Systems</b>
         </span>
         <div className = {styles.videoMask}  >
-          <video width="650" ref={videoRef}>
+          <video width="650" controls/* ref={videoRef} */>
             <source src="/videos/VAROS_Liver_ANI.1.mp4" type="video/mp4"></source>
           </video>
         </div>
@@ -104,14 +104,14 @@ export default function Home() {
             <div className={styles.teamItem}>
 
               <div className={styles.imgLinkContainer}> 
-                <img className={styles.image} alt="leo" src="/images/team/kian2.jpg" />
+                <img className={styles.image} alt="josh" src="/images/team/Josh.jpeg" />
                 <div className={styles.imgLink} >
-                  <a href="https://www.linkedin.com/in/gunnar-nelson-3878ba114/">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/josh-b-005613133/">LinkedIn</a>
                 </div>
               </div>
 
-              <h3>Leo Stone</h3>
-              <p>Software Engineer & Project Manager</p>
+              <h3>Josh Bradley</h3>
+              <p>CFO</p>
             </div>
           </div>
           <div className={styles.teamRow}>
@@ -128,16 +128,17 @@ export default function Home() {
               <p>Biological Sciences & Sales</p>
             </div>
             <div className={styles.teamItem}>
-              
+
               <div className={styles.imgLinkContainer}> 
-                <img className={styles.image} alt="josh" src="/images/team/Josh.jpeg" />
+                <img className={styles.image} alt="leo" src="/images/team/kian2.jpg" />
                 <div className={styles.imgLink} >
-                  <a href="https://www.linkedin.com/in/josh-b-005613133/">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/gunnar-nelson-3878ba114/">LinkedIn</a>
                 </div>
               </div>
 
-              <h3>Josh Bradley</h3>
-              <p>Finance, Marketing, & Sales</p>
+              <h3>Leo Stone</h3>
+              <p>Software Engineer & Project Manager</p>
+              
             </div>
             <div className={styles.teamItem}>
               
