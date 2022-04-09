@@ -4,7 +4,7 @@ import styles from '../../styles/Contact.module.scss'
 import { useState } from 'react'
 import axios from 'axios'
 
-const contact = () => {
+const Contact = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [subject, setSubject] = useState("")
@@ -156,4 +156,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact
