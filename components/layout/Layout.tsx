@@ -11,7 +11,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className={styles.layoutContainer}>
       <Header />
-        {children}
+      {children}
       <Footer />
     </div>
   )
