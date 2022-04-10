@@ -1,3 +1,5 @@
 {
-    "editor.fontSize": 18
+    "editor.fontSize": 18,
+    "conf.cssModuleTransform.styleVariable": "styles",
+    "conf.cssModuleTransform.ignorePrefix": ""
 }
