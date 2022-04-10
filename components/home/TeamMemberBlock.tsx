@@ -16,6 +16,7 @@ const TeamMemberBlock = () => {
               contactLink={teamMember.contactLink}
               contactText={teamMember.contactText}
               key={teamMember.name}
+
             />
           )
         })}
