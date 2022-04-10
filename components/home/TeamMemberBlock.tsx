@@ -15,6 +15,8 @@ const TeamMemberBlock = () => {
               image={teamMember.image}
               contactLink={teamMember.contactLink}
               contactText={teamMember.contactText}
+              key={teamMember.name}
+
             />
           )
         })}
