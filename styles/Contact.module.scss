@@ -30,6 +30,9 @@
   }
   
   .contactform {
+    @media (max-width: 600px) {
+      width: 100%;
+    }
     width: 600px;
     height: auto;
     border-radius: 25px;
@@ -42,6 +45,7 @@
       -o-animation: fadein 2s; /* Opera < 12.1 */
          animation: fadein 2s;
   }
+
   .requiredFieldsHidden {
     height: 20px;
   }
