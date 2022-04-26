@@ -15,7 +15,7 @@ export default function (req: NextApiRequest,  res: NextApiResponse) {
 
     let options = {
         from: `varostech@gmail.com`,
-        to: 'varostech@gmail.com',
+        to: 'contact@varostech.com',
         subject: `VAROSTech.com Message From ${req.body.name}`,
         text: req.body.message + " | Sent from: " + req.body.email,
         html: `<div><p><b>Subject: </b>${req.body.subject}</p></div><div><p><b>Body:</b><div>${req.body.message}</div></p></div><p>Sent from:

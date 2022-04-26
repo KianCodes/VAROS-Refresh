@@ -62,7 +62,9 @@
   list-style: none;
   width: auto;
   justify-content: unset;
-  gap: 0.5rem;
+  @media (max-width: 425px) {
+    padding-left: 0;
+  }
 }
 
 .navBarLinks a {
