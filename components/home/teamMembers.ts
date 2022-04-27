@@ -24,7 +24,7 @@ export const teamMembers: Array<TeamMemberType> = [
   {
     name: 'Leo Stone',
     role: 'Software Engineer & Project Manager',
-    image: '/images/team/kian2.jpg',
+    image: '/images/team/Leo.jpeg',
     contactLink: 'https://www.linkedin.com/in/gunnar-nelson-3878ba114/',
     contactText: 'LinkedIn',
   },
@@ -66,7 +66,7 @@ export const teamMembers: Array<TeamMemberType> = [
   {
     name: 'Kian Maranon',
     role: 'Web Developer',
-    image: '/images/team/kian1.jpg',
+    image: '/images/team/kian3.jpeg',
     contactLink: 'https://github.com/KianCodes',
     contactText: 'GitHub',
   },
