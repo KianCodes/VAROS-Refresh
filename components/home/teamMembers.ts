@@ -22,10 +22,10 @@ export const teamMembers: Array<TeamMemberType> = [
     contactText: 'LinkedIn',
   },
   {
-    name: 'Leo Stone',
-    role: 'Software Engineer & Project Manager',
-    image: '/images/team/Leo.jpeg',
-    contactLink: 'https://www.linkedin.com/in/gunnar-nelson-3878ba114/',
+    name: 'Josh Bradley',
+    role: 'CFO',
+    image: '/images/team/Josh.jpeg',
+    contactLink: 'https://www.linkedin.com/in/josh-b-005613133/',
     contactText: 'LinkedIn',
   },
   {
@@ -36,10 +36,10 @@ export const teamMembers: Array<TeamMemberType> = [
     contactText: 'LinkedIn',
   },
   {
-    name: 'Josh Bradley',
-    role: 'Finance, Marketing, & Sales',
-    image: '/images/team/Josh.jpeg',
-    contactLink: 'https://www.linkedin.com/in/josh-b-005613133/',
+    name: 'Leo Stone',
+    role: 'Software Engineer & Project Manager',
+    image: '/images/team/Leo.jpeg',
+    contactLink: 'https://www.linkedin.com/in/gunnar-nelson-3878ba114/',
     contactText: 'LinkedIn',
   },
   {
