@@ -47,6 +47,9 @@
 .navBarLogo {
   list-style: none;
 }
+.navBarLogo:hover {
+  cursor: pointer;
+}
 
 .navBarLogo img {
   max-height: 35px;
