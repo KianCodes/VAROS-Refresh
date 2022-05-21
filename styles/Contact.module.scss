@@ -30,6 +30,9 @@
   }
   
   .contactform {
+    @media (max-width: 600px) {
+      width: 100%;
+    }
     width: 600px;
     height: auto;
     border-radius: 25px;
@@ -42,6 +45,7 @@
       -o-animation: fadein 2s; /* Opera < 12.1 */
          animation: fadein 2s;
   }
+
   .requiredFieldsHidden {
     height: 20px;
   }
@@ -150,6 +154,7 @@
   
   .submit_button {
     background-color: base.$secondary-light;
+    font-size: 16px;
     color: white;
     border: none;
     border-radius: 5px;
@@ -160,7 +165,8 @@
 
   .submit_button:hover {
       cursor: pointer;
-      background-color: black;
+      font-size: 24px;
+      background-color: base.$primary-light;
   }
   
   .submit_button_div {

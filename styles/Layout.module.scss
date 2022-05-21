@@ -47,6 +47,9 @@
 .navBarLogo {
   list-style: none;
 }
+.navBarLogo:hover {
+  cursor: pointer;
+}
 
 .navBarLogo img {
   max-height: 35px;
@@ -62,7 +65,9 @@
   list-style: none;
   width: auto;
   justify-content: unset;
-  gap: 0.5rem;
+  @media (max-width: 425px) {
+    padding-left: 0;
+  }
 }
 
 .navBarLinks a {
@@ -74,6 +79,10 @@
   background-color: #248aff;
   padding: 0.5rem 1.5rem;
   border-radius: 3.125rem;
+}
+
+.navBarContact:hover {
+  cursor: pointer;
 }
 
 .contentContainer { 
