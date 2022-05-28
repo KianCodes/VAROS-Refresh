@@ -8,7 +8,7 @@ const Box = dynamic(() => import('@/components/canvas/Box'), {
   ssr: false,
 })
 
-const index = () => {
+const Three = () => {
   let liverPath = '/models/VAROS-3D-Models/LiverHealthy.obj'
   let intestinePath = '/models/VAROS-3D-Models/VAROS_Intestine.obj'
   const [modelPath, setModelPath] = useState(liverPath)
@@ -49,4 +49,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Three
