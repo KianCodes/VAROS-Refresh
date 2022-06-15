@@ -10,7 +10,7 @@ const Box = dynamic(() => import('@/components/canvas/Box'), {
 })
 
 const Three = () => {
-  let liverPath = '/models/VAROS-3D-Models/LiverHealthy2.obj'
+  let liverPath = '/models/VAROS-3D-Models/LiverHealthy.obj'
   let intestinePath = '/models/VAROS-3D-Models/VAROS_Intestine.obj'
   const [modelPath, setModelPath] = useState(liverPath)
   const handleClick = (event) => {

@@ -8,6 +8,7 @@ const ModelOBJ = ({ file }: { file: string }) => {
   const mat = new MeshNormalMaterial()
   const obj = useLoader(OBJLoader, file)
   const ref = useRef<THREE.Mesh>(null!)
+  
   obj.traverse((child) => {
     if(child instanceof Mesh) {
       child.material = mat
