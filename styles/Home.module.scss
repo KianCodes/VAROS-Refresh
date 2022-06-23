@@ -281,9 +281,10 @@
   @media screen and (max-width: 650px) {
     /* flex-direction: column;
     justify-content: space-between; */
-    height: 400px;
+    padding-bottom: 0;
   }
 }
+
 .mainMission img {
   max-height: 45rem;
   @media screen and (max-width: 650px) {
@@ -295,7 +296,48 @@
   max-width: 400px;
   line-height: 2.5;
   font-size: 25px;
+}
 
+.mainProduct {
+  padding: 7rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  width: 100%;
+  @media screen and (max-width: 650px) {
+    /* flex-direction: column;
+    justify-content: space-between; */
+    padding-bottom: 0;
+  }
+}
+
+.mainProduct p {
+  max-width: 400px;
+  line-height: 2.5;
+  font-size: 25px;
+}
+
+.mainTimeline {
+  padding: 7rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  width: 100%;
+  @media screen and (max-width: 650px) {
+    /* flex-direction: column;
+    justify-content: space-between; */
+    padding-bottom: 0;
+  }
+}
+
+.mainTimeline p {
+  max-width: 400px;
+  line-height: 2.5;
+  font-size: 25px;
 }
 
 .lightRed {

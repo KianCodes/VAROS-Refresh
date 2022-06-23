@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import ModelOBJ from '@/components/models/ModelOBJ'
 import { OrbitControls, Stage, Environment } from '@react-three/drei'
 import styles from '../../styles/ThreeJS.module.scss'
+import { isMobile } from 'react-device-detect'
 
 const Box = dynamic(() => import('@/components/canvas/Box'), {
   ssr: false,
@@ -17,16 +18,48 @@ const Three = () => {
     setModelPath(event.target.value)
   }
 
+  const ButtonsDesktop = () => {
+    return(
+      <>
+        <div className = {styles.buttonsFrame} />
+        <div className={styles.buttonsDesktopContainer}>
+          <div className = {styles.modelButtonsDesktop}>
+            <h2>Models</h2>
+            <button onClick={handleClick} value={intestinePath}>
+              Intestine
+            </button>
+            <button onClick={handleClick} value={liverPath}>
+              Liver
+            </button>
+          </div>
+          <div className = {styles.controlButtonsDesktop}>
+            <h2>Controls</h2>
+            {/* To do */}
+          </div>
+        </div>
+      </>
+    )
+  }
+
+  const ButtonsMobile = () => {
+    return(
+      <div className = {styles.buttonsMobileContainer} >
+        <h2>Models</h2>
+        <div className = {styles.buttonsMobile}>
+          <button onClick={handleClick} value={intestinePath}>
+            Intestine
+          </button>
+          <button onClick={handleClick} value={liverPath}>
+            Liver
+          </button>
+        </div>     
+      </div>
+    )
+  }
+
   return (
     <div className = {styles.container}>
-      <div className = {styles.buttons}>
-        <button onClick={handleClick} value={intestinePath}>
-          Intestine
-        </button>
-        <button onClick={handleClick} value={liverPath}>
-          Liver
-        </button>
-      </div>
+      <ButtonsDesktop />
       <div className = {styles.main}>
         <Canvas>
           <OrbitControls
@@ -41,6 +74,7 @@ const Three = () => {
             <Environment files = 'nebula n0.hdr' path={'/backgrounds/'} background />
           </Stage>
         </Canvas>
+        <ButtonsMobile />
       </div>
     </div>
   )

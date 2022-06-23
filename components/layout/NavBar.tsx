@@ -14,6 +14,8 @@ function NavBar() {
             <li className = {styles.navBarLinksWrapper}>
                 <ul className = {styles.navBarLinks}>
                     <Link href="/#mission">Mission</Link>
+                    <Link href="/#product">Product</Link>
+                    <Link href="/#timeline">Timeline</Link>
                     <Link href="/#about">About</Link>
                     {/* <Link href="/threejs"><a>Demo</a></Link> */}
                 </ul>
