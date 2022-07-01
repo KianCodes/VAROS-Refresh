@@ -331,7 +331,7 @@
   max-width: 400px;
   transition: transform .2s; /* Animation */
   @media screen and (max-width: 650px) {
-    max-width: 350px;
+    max-width: 300px;
   }
 }
 
@@ -360,6 +360,9 @@
 }
 
 .timelineP {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
   max-width: 550px;
   line-height: 1.5;
   border-left: 4px solid base.$primary;
