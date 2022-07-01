@@ -3,7 +3,7 @@ import styles from '../../styles/Layout.module.scss'
 import Image from 'next/image'
 function Footer() {
   return (
-    <footer className={styles.footer}>
+    <div className={styles.footer}>
       <a
         href="https://github.com/KianCodes"
         target="_blank"
@@ -17,7 +17,7 @@ function Footer() {
           width={48}
         />
       </a>
-    </footer>
+    </div>
   )
 }
 

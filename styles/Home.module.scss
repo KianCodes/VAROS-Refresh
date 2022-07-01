@@ -319,6 +319,31 @@
   font-size: 25px;
 }
 
+.mobileApp {
+  max-height: 45rem;
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
+}
+
+.webEditor {
+  margin: 20px 0 0 0;
+  max-width: 400px;
+  transition: transform .2s; /* Animation */
+  @media screen and (max-width: 650px) {
+    max-width: 350px;
+  }
+}
+
+.webEditor:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.threejsLink:hover {
+  cursor: pointer;
+}
+
 .mainTimeline {
   padding: 7rem 0;
   display: flex;
@@ -334,10 +359,24 @@
   }
 }
 
-.mainTimeline p {
-  max-width: 400px;
-  line-height: 2.5;
+.timelineP {
+  max-width: 550px;
+  line-height: 1.5;
+  border-left: 4px solid base.$primary;
   font-size: 25px;
+  padding: 0 0 0 10px;
+}
+
+.mainTimeline h3 {
+  margin: 0px 0px 15px 0px;
+}
+
+.mainTimeline ul {
+  margin: 0px 0px 30px 0px;
+}
+.mainTimeline li {
+  font-size: 20px;
+  list-style: none;
 }
 
 .lightRed {
